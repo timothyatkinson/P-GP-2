@@ -1,10 +1,14 @@
 ## About GP 2
 
-GP 2 (Graph Programs 2) is a rule-based, nondeterministic programming language for solving graph problems at a high level of abstraction, freeing programmers from handling low-level data structures. The core of GP 2 consists of four constructs: single-step application of a set of conditional graph-transformation rules, sequential composition, branching and iteration. The language has a small structural operational semantics and a visual editor for writing GP 2 programs, running them, and tracing their execution.
+P-GP 2 (Probabilistic Graph Programs 2) is a rule-based, probabilistic programming language for solving graph problems at a high level of abstraction, freeing programmers from handling low-level data structures. The core of GP 2 consists of four constructs: single-step application of a set of conditional graph-transformation rules, sequential composition, branching and iteration. The language has a small structural operational semantics and a visual editor for writing P-GP 2 programs, running them, and tracing their execution.
 
-## The GP 2 Compiler
+P-GP 2 is a refinement of GP 2 (Graph Programs 2, available online: https://github.com/UoYCS-plasma/GP2/tree/master/Compiler) where nondeterministic decisions are refined to probabilistic decisions, allowing consistent probabilistic program executions and probabilistic analysis of program behavior. 
 
-The GP 2 compiler translates a GP 2 program into executable C code.
+When a set of conditional graph transformation rules are applied there are two decisions to be made: the choice of rule and the choice of match for that rule. Whereas GP 2 treats these as nondeterministic decisions whose interpretation is left open to the designer of a GP 2 compiler, P-GP 2 strictly assigns probability distributions to these decisions, freeing the user from needing an intimate understanding of the compiler to predict program execution. 
+
+## The P-GP 2 Compiler
+
+The P-GP 2 compiler translates a P-GP 2 program into executable C code.
 The generated code is executable with the support of the GP 2 library.
 
 Default usage:
@@ -30,7 +34,7 @@ Options:
 
 **-o** - Specify directory for generated code and program output.
 
-The compiler can also be used to validate GP 2 source files.
+The compiler can also be used to validate P-GP 2 source files.
 
 Run `gp2 -p <program_file>` to validate a program.
 
@@ -40,7 +44,7 @@ Run `gp2 -h <host_file>` to validate a host graph.
 
 ## Installation
 
-Superusers install GP 2 as follows: 
+Superusers install P-GP 2 as follows: 
 
 1. Run `./configure` from the top-level directory to generate `config.h` and `Makefile`.
 
@@ -77,3 +81,5 @@ See the file [COPYING](COPYING).
 The GP 2 language was designed by Detlef Plump.
 
 The GP 2 compiler and runtime library was developed by Christopher Bak.
+
+The P-GP 2 refinement of GP 2 was designed by Timothy Atkinson and Detlef Plump and developed by Timothy Atkinson.
