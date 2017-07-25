@@ -1,10 +1,12 @@
-## About GP 2
+## About P-GP 2
 
 P-GP 2 (Probabilistic Graph Programs 2) is a rule-based, probabilistic programming language for solving graph problems at a high level of abstraction, freeing programmers from handling low-level data structures. The core of GP 2 consists of four constructs: single-step application of a set of conditional graph-transformation rules, sequential composition, branching and iteration. The language has a small structural operational semantics and a visual editor for writing P-GP 2 programs, running them, and tracing their execution.
 
 P-GP 2 is a refinement of GP 2 (Graph Programs 2, available online: https://github.com/UoYCS-plasma/GP2/tree/master/Compiler) where nondeterministic decisions are refined to probabilistic decisions, allowing consistent probabilistic program executions and probabilistic analysis of program behavior. 
 
 When a set of conditional graph transformation rules are applied there are two decisions to be made: the choice of rule and the choice of match for that rule. Whereas GP 2 treats these as nondeterministic decisions whose interpretation is left open to the designer of a GP 2 compiler, P-GP 2 strictly assigns probability distributions to these decisions, freeing the user from needing an intimate understanding of the compiler to predict program execution. 
+
+All code in this repository is an extension of Chris Bak's initial implementation of GP 2, available via the link above.
 
 ## The P-GP 2 Compiler
 
